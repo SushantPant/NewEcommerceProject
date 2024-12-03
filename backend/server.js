@@ -2,11 +2,10 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const cookieParse = require("cookie-parser");
+require("dotenv").config();
 
 mongoose
-  .connect(
-    "mongodb+srv://ganjahanja:JepCItoe65kersK1@cluster0.doupi.mongodb.net/"
-  )
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("mongo db connected"))
   .catch((error) => console.log(error));
 const app = express();
