@@ -5,7 +5,7 @@ const cookieParse = require("cookie-parser");
 
 mongoose
   .connect(
-    "mongodb+srv://ganjahanja:JepCItoe65kersK1@cluster0.doupi.mongodb.net/"
+    *
   )
   .then(() => console.log("mongo db connected"))
   .catch((error) => console.log(error));
